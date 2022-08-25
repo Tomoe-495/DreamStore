@@ -141,12 +141,32 @@ button:focus, input:focus, textarea:focus{
     left: 100%;
 }
 
+.sections-container{
+    width: calc(100vw - 200px);
+    height: 100%;
+}
+
+/* section top section --------------------------------- */
+
+.section-top{
+    width: calc(100% - 70px);
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    border: 1px solid rgba(0, 0, 0, .4);
+}
+
+.user-profile{
+    display:flex;
+}
+
  /* home section ----------------------------------------- */
 
 .home{
-    background-color: #fff;
-    width: calc(100vw - 200px);
-    height: 100%;
+    display: flex;
 }
 
  /* about section ----------------------------------------- */
