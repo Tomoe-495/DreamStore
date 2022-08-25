@@ -12,9 +12,11 @@ body{
     margin: 0;
     font-family: Poppins;
 }
-
 h1,h2,h3,h4,h5,h6,p{
     margin: 0;
+}
+button:focus, input:focus, textarea:focus{
+    outline: none;
 }
 
 .main-container{
@@ -25,24 +27,142 @@ h1,h2,h3,h4,h5,h6,p{
     display: flex;
 }
 
+/* navbar section --------------------------------------- */
+
 .navbar{
     background-color: var(--theme1);
-    width: 250px;
+    width: 200px;
     height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
 }
+
+.logo{
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+}
+.nav-item{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+}
+.nav-p{
+    cursor: pointer;
+    transition: all 300ms linear;
+}
+.nav-color{
+    background-color: var(--theme3);
+    height: 30px;
+    width: 200px;
+    border-radius: 15px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(-200%);
+    z-index: 4;
+    transition: all 350ms ease;
+}
+
+.nav-item ion-icon{
+    font-size: 25px;
+    z-index: 5;
+    transition: all 500ms ease-in;
+}
+
+.nav-item.active .nav-p, .nav-item:hover .nav-p{
+    color: var(--theme3);
+}
+.nav-item.active ion-icon, .nav-item:hover ion-icon{
+    color: #fff;
+}
+.nav-item.active .nav-color, .nav-item:hover .nav-color{
+    transform: translateY(-50%) translateX(-82%);
+}
+
+.question{
+    width: 70%;
+    height: auto;
+    padding: 20px 10px;
+    font-family: Montserrat;
+    background-color: #fff;
+    filter: drop-shadow(rgba(0, 0, 0, .3) 5px 5px 10px);
+    border-radius: 7px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.q-head{
+    margin-bottom: 10px;
+}
+.q-para{
+    font-size: 13px
+}
+
+.q-button{
+    background-color: var(--theme3);
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+.q-button::after{
+    content: "";
+    width: 30px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .3);
+    transform: rotateZ(30deg);
+    position: absolute;
+    top: -20px;
+    left: -100%;
+    transition: all 400ms;
+}
+.q-button:hover::after{
+    left: 100%;
+}
+
+ /* home section ----------------------------------------- */
 
 .home{
     background-color: #fff;
-    width: 100%;
+    width: calc(100vw - 200px);
     height: 100%;
 }
+
+ /* about section ----------------------------------------- */
 
 .about{
     display: none;
 }
+
+ /* products section ----------------------------------------- */
+
 .products{
     display: none;
 }
+
+ /* contacts section ----------------------------------------- */
+
 .contacts{
     display: none;
 }
