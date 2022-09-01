@@ -19,31 +19,31 @@
 
                 <div class="nav-item active">
                     <ion-icon name="home"></ion-icon>
-                    <a class="nav-p">Home</a>
+                    <a onclick="sectAppear('home')" class="nav-p home-btn">Home</a>
                     <span class="nav-color"></span>
                 </div> <!--nav-item end-->
 
                 <div class="nav-item">
                     <ion-icon name="people"></ion-icon>
-                    <a class="nav-p">About</a>
+                    <a onclick="sectAppear('about')" class="nav-p about-btn">About</a>
                     <span class="nav-color"></span>
                 </div> <!--nav-item end-->
 
                 <div class="nav-item">
                     <ion-icon name="cart"></ion-icon>
-                    <a class="nav-p">Products</a>
+                    <a onclick="sectAppear('product')" class="nav-p product-btn">Products</a>
                     <span class="nav-color"></span>
                 </div> <!--nav-item end-->
 
                 <div class="nav-item">
                     <ion-icon name="moon"></ion-icon> <!--sunny-->
-                    <a class="nav-p">Theme</a>
+                    <a class="nav-p theme-btn">Theme</a>
                     <span class="nav-color"></span>
                 </div><!--nav-item end-->
 
                 <div class="nav-item">
                     <ion-icon name="person-circle"></ion-icon> <!--sunny-->
-                    <a class="nav-p">Contacts</a>
+                    <a onclick="sectAppear('contact')" class="nav-p contact-btn">Contacts</a>
                     <span class="nav-color"></span>
                 </div> <!--nav-item end-->
 
@@ -142,20 +142,138 @@
                                 </div><!--gal cont end-->
                             </div> <!-- gal card end-->
 
+                            <div class="gal-card">
+                                <img class="gal-img" src="images/2.jpg" alt="">
+                                <div class="gal-cont">
+                                    <p class="gal-title">Japanese Landscape</p>
+                                    <div class="gal-detail">
+                                        <p class="gal-price">$7.99</p>
+                                        <div class="gal-rate">
+                                            <ion-icon name="star"></ion-icon>
+                                            <p>4.9</p>
+                                        </div>
+                                    </div>
+                                </div><!--gal cont end-->
+                            </div> <!-- gal card end-->
+
+                            <div class="gal-card">
+                                <img class="gal-img" src="images/3.jpg" alt="">
+                                <div class="gal-cont">
+                                    <p class="gal-title">Western Hills</p>
+                                    <div class="gal-detail">
+                                        <p class="gal-price">$4.49</p>
+                                        <div class="gal-rate">
+                                            <ion-icon name="star"></ion-icon>
+                                            <p>3.7</p>
+                                        </div>
+                                    </div>
+                                </div><!--gal cont end-->
+                            </div> <!-- gal card end-->
+
+                            <div class="gal-card">
+                                <img class="gal-img" src="images/4.jpg" alt="">
+                                <div class="gal-cont">
+                                    <p class="gal-title">Deer Forest</p>
+                                    <div class="gal-detail">
+                                        <p class="gal-price">$4.49</p>
+                                        <div class="gal-rate">
+                                            <ion-icon name="star"></ion-icon>
+                                            <p>4.0</p>
+                                        </div>
+                                    </div>
+                                </div><!--gal cont end-->
+                            </div> <!-- gal card end-->
+
+                            <div class="gal-card">
+                                <img class="gal-img" src="images/5.jpg" alt="">
+                                <div class="gal-cont">
+                                    <p class="gal-title">Deer Forest</p>
+                                    <div class="gal-detail">
+                                        <p class="gal-price">$4.49</p>
+                                        <div class="gal-rate">
+                                            <ion-icon name="star"></ion-icon>
+                                            <p>4.0</p>
+                                        </div>
+                                    </div>
+                                </div><!--gal cont end-->
+                            </div> <!-- gal card end-->
+
+                            <div class="gal-card">
+                                <img class="gal-img" src="images/6.jpg" alt="">
+                                <div class="gal-cont">
+                                    <p class="gal-title">Sakura Moon</p>
+                                    <div class="gal-detail">
+                                        <p class="gal-price">$8.49</p>
+                                        <div class="gal-rate">
+                                            <ion-icon name="star"></ion-icon>
+                                            <p>4.9</p>
+                                        </div>
+                                    </div>
+                                </div><!--gal cont end-->
+                            </div> <!-- gal card end-->
+
+                            <div class="gal-card">
+                                <img class="gal-img" src="images/7.jpg" alt="">
+                                <div class="gal-cont">
+                                    <p class="gal-title">Dragon</p>
+                                    <div class="gal-detail">
+                                        <p class="gal-price">$6.00</p>
+                                        <div class="gal-rate">
+                                            <ion-icon name="star"></ion-icon>
+                                            <p>4.1</p>
+                                        </div>
+                                    </div>
+                                </div><!--gal cont end-->
+                            </div> <!-- gal card end-->
+
+                            <div class="gal-card">
+                                <img class="gal-img" src="images/8.jpg" alt="">
+                                <div class="gal-cont">
+                                    <p class="gal-title">Abandoned Library</p>
+                                    <div class="gal-detail">
+                                        <p class="gal-price">$8.00</p>
+                                        <div class="gal-rate">
+                                            <ion-icon name="star"></ion-icon>
+                                            <p>4.8</p>
+                                        </div>
+                                    </div>
+                                </div><!--gal cont end-->
+                            </div> <!-- gal card end-->
+
+
                         </div> <!-- select gallery end-->
 
                     </div> <!-- selections end-->
 
-                    <div class="recent-add">
+                    <div class="recent-add scroll">
 
                         <div class="recent-head">
                             <p class="s-head r-head">Recently Added</p>
                             <a href="" class="s-viewall">View all -></a>
                         </div>
 
-                    </div>
+                        <div class="recent-gallery">
 
-                </div>
+                            <div class="recent-card">
+                                <div class="rec-img"><img src="images/18.jpg" alt=""></div>
+                                <p class="day-added">few hours ago</p>
+                            </div>
+
+                            <div class="recent-card">
+                                <div class="rec-img"><img src="images/17.jpg" alt=""></div>
+                                <p class="day-added">1 day ago</p>
+                            </div>
+
+                            <div class="recent-card">
+                                <div class="rec-img"><img src="images/16.jpg" alt=""></div>
+                                <p class="day-added">2 day ago</p>
+                            </div>
+
+                        </div>
+
+                    </div> <!-- recent add end-->
+
+                </div> <!--home cat end-->
 
 
             </div><!-- home end-->
