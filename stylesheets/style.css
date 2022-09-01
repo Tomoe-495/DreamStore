@@ -363,7 +363,7 @@ ion-icon{
     width: 100%;
     grid-gap: 20px 40px;
     grid-template-columns: repeat(auto-fit, minmax(160px, 170px));
-
+    justify-content: space-between;
 }
 
 .gal-card{
@@ -465,4 +465,12 @@ ion-icon{
 
 .contacts{
     display: none;
+}
+
+
+.home, .about, .products, .contacts{
+    animation: appear 500ms ease-in;
+}
+@keyframes appear{
+    0%{opacity: 0}100%{opacity: 1}
 }
