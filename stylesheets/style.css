@@ -23,6 +23,18 @@ button:focus, input:focus, textarea:focus{
 ion-icon{
     pointer-events: none;
 }
+
+.scroll::-webkit-scrollbar{
+    width: 7px;
+}
+.scroll::-webkit-scrollbar-track{
+    background-color: #747474;
+    border-radius: 3px;
+}
+.scroll::-webkit-scrollbar-thumb{
+    background-color: #353535;
+}
+
 .line{
     width: 100%;
     height: 1px;
@@ -197,13 +209,14 @@ ion-icon{
     justify-content: center;
     align-items: center;
 }
-.grey-icons{
+
+.search-bar ion-icon, .cart ion-icon, .profile ion-icon{
     font-size: 20px;
     color: rgb(200, 200, 200);
     cursor: pointer;
     transition: all 300ms;
 }
-.grey-icons:hover{
+.search-bar:hover ion-icon, .cart:hover ion-icon, .profile:hover ion-icon{
     color: rgb(100, 100, 100);
 }
 
@@ -297,6 +310,107 @@ ion-icon{
 .stats div{
     display:flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.cut-line{
+    margin: 15px 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.home-cat{
+    display: flex;
+    width: 100%;
+    gap: 30px;
+}
+.selections{
+    width: 100%;
+    padding: 10px 10px 50px 0;
+    overflow-y: scroll;
+}
+
+.select-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.s-head{
+    font-size: 25px;
+    font-weight: 500;
+}
+.r-head{
+    font-size: 18px;
+}
+.s-viewall{
+    color: rgb(200, 200, 200);
+    text-decoration: none;
+    transition: all 300ms;
+    text-align: right;
+    font-size: .7em;
+}
+.s-viewall:hover{
+    letter-spacing: 1px;
+}
+
+.select-gallery{
+    margin-top: 30px;
+    display: grid;
+    width: 100%;
+    grid-gap: 10px 20px;
+}
+
+.gal-card{
+    width: 170px;
+    height: 250px;
+    color: black;
+    overflow: hidden;
+    position: relative;
+    font-family: Montserrat;
+    border-radius: 10px 10px 0 0;
+}
+.gal-cont{
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+.gal-img{
+    width: 100%;
+    cursor: pointer;
+    transition: all 300ms ease-out;
+}
+.gal-card:hover .gal-img{
+    transform: scale(1.1);
+}
+.gal-title{
+    margin: 5px 0;
+    font-weight: 500;
+}
+.gal-detail, .gal-rate{
+    display: flex;
+}
+.gal-detail{
+    justify-content: space-between;
+    align-items: center;
+}
+.gal-rate{
+    align-items: center;
+    gap: 3px;
+}
+.gal-rate ion-icon{
+    color: yellow;
+    filter: drop-shadow(rgba(0, 0, 0, .1) 1px 1px 10px);
+}
+
+.recent-add{
+    width: 300px;
+    padding: 0 20px;
+}
+.recent-head{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
