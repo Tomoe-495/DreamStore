@@ -11,42 +11,21 @@ let about = document.getElementsByClassName('about')[0];
 let product = document.getElementsByClassName('products')[0];
 let contact = document.getElementsByClassName('contacts')[0];
 
-let allSectbtn = [homebtn, aboutbtn, productbtn, contactbtn];
-let allSects = [home, about, product, contact];
+function sectAppear(btn, sect, arg,  num){
+    btn.onclick = () => {
+        sect.style.display = "block";
+        for(let i of arg){
+            i.style.display = "none";
+        }
+        for(let n of navitem){
+            n.classList.remove('active');
+        }navitem[num].classList.add('active');
+    }
+}
 
-homebtn.onclick = () => {
-    home.style.display = "block";
-    for(let i of [about, product, contact]){
-        i.style.display = "none";
-    }
-    for(let n of navitem){
-        n.classList.remove('active');
-    }navitem[0].classList.add('active');
-}
-aboutbtn.onclick = () => {
-    about.style.display = "block";
-    for(let i of [home, product, contact]){
-        i.style.display = "none";
-    }
-    for(let n of navitem){
-        n.classList.remove('active');
-    }navitem[1].classList.add('active');
-}
-productbtn.onclick = () => {
-    product.style.display = "block";
-    for(let i of [about, home, contact]){
-        i.style.display = "none";
-    }
-    for(let n of navitem){
-        n.classList.remove('active');
-    }navitem[2].classList.add('active');
-}
-contactbtn.onclick = () => {
-    contact.style.display = "block";
-    for(let i of [about, product, home]){
-        i.style.display = "none";
-    }
-    for(let n of navitem){
-        n.classList.remove('active');
-    }navitem[4].classList.add('active');
-}
+sectAppear(homebtn, home, [about, product, contact], 0)
+sectAppear(aboutbtn, about, [home, product, contact], 1)
+sectAppear(productbtn, product, [about, home, contact], 2)
+sectAppear(contactbtn, contact, [about, product, home], 4)
+
+        // section changing
