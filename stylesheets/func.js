@@ -1,3 +1,5 @@
+
+//         section changing --- start
 let homebtn = document.getElementsByClassName('home-btn')[0];
 let aboutbtn = document.getElementsByClassName('about-btn')[0];
 let productbtn = document.getElementsByClassName('product-btn')[0];
@@ -28,4 +30,4 @@ sectAppear(aboutbtn, about, [home, product, contact], 1)
 sectAppear(productbtn, product, [about, home, contact], 2)
 sectAppear(contactbtn, contact, [about, product, home], 4)
 
-        // section changing
+//      section changing  --- end
