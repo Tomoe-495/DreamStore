@@ -1,11 +1,95 @@
-
-let json = {username: "add", password: "something"}
-json = JSON.stringify(json);
-localStorage.setItem('data', json)
-
 let get = localStorage.getItem("data");
 Value = JSON.parse(get);
 console.log(Value)
+
+let User = document.getElementsByClassName('user-welcome')[0];
+User.style.display = "none";
+
+// profile pop up 
+let profile = document.getElementsByClassName('profile')[0];
+profile.onclick = () => {
+    profile.classList.add('active');
+}
+// profile pop up end
+
+//  registration
+let createACC = document.getElementsByClassName('create-account')[0];
+let signIn = document.getElementsByClassName('signin')[0];
+let signout = document.getElementsByClassName('sign--out')[0];
+
+let errorM =  document.getElementsByClassName('error-message')[0];
+
+createACC.onclick = () =>{
+    let userName = document.getElementsByClassName('username')[0].value;
+    let userPass = document.getElementsByClassName('userpass')[0].value;
+
+    let json = {username: userName, password: userPass, signed: false};
+    json = JSON.stringify(json);
+    localStorage.setItem('data', json);
+    window.location.reload();
+}
+
+signIn.onclick = () => {
+    let name = document.getElementsByClassName('name')[0].value;
+    let pass = document.getElementsByClassName('pass')[0].value;
+    if(name == Value.username){
+        if(pass == Value.password){
+            let json = {username: Value.username, password: Value.password, signed: true};
+            json = JSON.stringify(json);
+            localStorage.setItem('data', json);
+            window.location.reload();
+        }else if(pass != Value.password){
+            errorM.innerHTML = "invalid Password";
+            errorM.style.display = "block"
+        }
+    }else if(name != Value.username){
+        errorM.innerHTML = "invalid Username";
+        errorM.style.display = "block";
+    }
+}
+
+signout.onclick = () => {
+    let json = {username: Value.username, password: Value.password, signed: false};
+    json = JSON.stringify(json);
+    localStorage.setItem('data', json);
+    window.location.reload();
+}
+
+//  registration end
+
+if(Value != null){
+    if(Value.signed){
+        User.innerHTML = "Hello " + Value.username + "!";
+        User.style.display = "block";
+        document.getElementsByClassName('acc-btns')[0].style.display = "none";
+        document.getElementsByClassName('sign-out')[0].style.display = "flex";
+    }else{
+        User.style.display = "none";
+        document.getElementsByClassName('acc-btns')[0].style.display = "flex";
+        document.getElementsByClassName('sign-out')[0].style.display = "none";
+    }
+}
+
+
+// profile login and stuff
+let create = document.getElementsByClassName('create-acc')[0];
+let signin = document.getElementsByClassName('acc-signin')[0];
+let btnCR = document.getElementsByClassName('btn-cr')[0];
+let btnSI = document.getElementsByClassName('btn-si')[0];
+
+btnCR.onclick = () => {
+    btnCR.classList.add('active');
+    btnSI.classList.remove('active');
+    signin.style.display = "none";
+    create.style.display = "flex";
+}
+btnSI.onclick = () => {
+    btnSI.classList.add('active');
+    btnCR.classList.remove('active');
+    create.style.display = "none";
+    signin.style.display = "flex";
+}
+// profile login and stuff  end
 
 //         section changing --- start
 let homebtn = document.getElementsByClassName('home-btn')[0];

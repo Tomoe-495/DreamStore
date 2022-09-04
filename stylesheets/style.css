@@ -55,7 +55,9 @@ ion-icon{
     background-color: var(--theme1);
     width: 200px;
     height: 100%;
-    position: relative;
+    position: fixed;
+    left: 0;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -166,6 +168,7 @@ ion-icon{
 .sections-container{
     width: calc(100vw - 200px);
     height: 100%;
+    margin-left: 200px;
 }
 
 /* section top section --------------------------------- */
@@ -178,6 +181,10 @@ ion-icon{
     justify-content: space-between;
     padding: 0 35px;
     height: 65px;
+}
+
+.user-welcome{
+    display: none;
 }
 
 .user-profile{
@@ -244,11 +251,14 @@ ion-icon{
 
 .profile.active .acc-sign{
     display: block;
-    border: 1px solid rgba(0, 0, 0, .3);
     position: absolute;
     top: 40px;
     right: 10px;
     width: 200px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, .9);
+    backdrop-filter: blur(5px);
 }
 
 .acc-btns{
@@ -256,15 +266,91 @@ ion-icon{
     margin-top: 10px;
     justify-content:center
 }
-.acc-btns button{
+.acc-btns .btns{
     border: none;
-    /* background-color: #fff; */
-    padding: 5px 10px;
+    background-color: #fff;
+    padding: 10px 10px;
     color: #454545;
     font-weight: 700;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+.acc-btns .btns:hover{
+    background-color: var(--theme3);
+    color: #fff;
 }
 .acc-btns .active{
-    background-color: blueviolet;
+    background-color: var(--theme3);
+    color: #fff;
+}
+.create-acc, .acc-signin{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    gap: 10px;
+    transition: all 300ms ease-out;
+}
+.create-acc input, .acc-signin input{
+    text-align: center;
+    padding: 5px 0;
+    border: 1px solid rgba(0, 0, 0, .43);
+    border-radius: 10px;
+    transition: all 300ms;
+}
+.create-acc input:focus, .acc-signin input:focus{
+    filter: drop-shadow(rgba(0, 0, 0, .1) 0 2px 10px);
+    padding: 7px 0;
+}
+.create-acc button, .acc-signin button{
+    border: none;
+    padding: 5px 20px;
+    color: #fff;
+    background-color: var(--theme3);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.create-acc button::after, .acc-signin button::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 100px;
+    transform: rotateZ(30deg);
+    top: -30px;
+    left: -100%;
+    background-color: rgba(255, 255, 255, .3);
+    transition: all 300ms;
+}
+.create-acc button:hover::after, .create-acc button:focus::after, .acc-signin button:hover::after, .acc-signin button:focus::after{
+    left: 110%;
+}
+
+.sign-out{
+    display: none;
+    justify-content:center;
+}
+.sign--out{
+    border: none;
+    padding: 10px 20px;
+    color: red;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.error-message{
+    color: red;
+    animation:shake 300ms;
+}
+@keyframes shake{
+    0%{transform: translateX(-10px)}
+    25%{transform: translateX(10px)}
+    50%{transform: translateX(-5px)}
+    75%{transform: translateX(5px)}
+    100%{transform: translateX(0)}
 }
 
  /* home section ----------------------------------------- */
