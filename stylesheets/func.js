@@ -1,4 +1,12 @@
 
+let json = {username: "add", password: "something"}
+json = JSON.stringify(json);
+localStorage.setItem('data', json)
+
+let get = localStorage.getItem("data");
+Value = JSON.parse(get);
+console.log(Value)
+
 //         section changing --- start
 let homebtn = document.getElementsByClassName('home-btn')[0];
 let aboutbtn = document.getElementsByClassName('about-btn')[0];

@@ -235,6 +235,36 @@ ion-icon{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    position: relative;
+}
+
+.profile .acc-sign{
+    display: none;
+}
+
+.profile.active .acc-sign{
+    display: block;
+    border: 1px solid rgba(0, 0, 0, .3);
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    width: 200px;
+}
+
+.acc-btns{
+    display: flex;
+    margin-top: 10px;
+    justify-content:center
+}
+.acc-btns button{
+    border: none;
+    /* background-color: #fff; */
+    padding: 5px 10px;
+    color: #454545;
+    font-weight: 700;
+}
+.acc-btns .active{
+    background-color: blueviolet;
 }
 
  /* home section ----------------------------------------- */
@@ -365,7 +395,6 @@ ion-icon{
     width: 100%;
     grid-gap: 20px 40px;
     grid-template-columns: repeat(auto-fit, minmax(160px, 170px));
-    justify-content: space-between;
 }
 
 .gal-card{
