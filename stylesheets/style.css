@@ -181,6 +181,8 @@ ion-icon{
     justify-content: space-between;
     padding: 0 35px;
     height: 65px;
+    background-color: #fff;
+    filter: drop-shadow(rgb(0, 0, 0, .02) 0 5px 10px);
 }
 
 .user-welcome{
@@ -591,3 +593,4 @@ ion-icon{
 @keyframes appear{
     0%{opacity: 0}100%{opacity: 1}
 }
+

@@ -3,7 +3,6 @@ Value = JSON.parse(get);
 console.log(Value)
 
 let User = document.getElementsByClassName('user-welcome')[0];
-User.style.display = "none";
 
 // profile pop up 
 let profile = document.getElementsByClassName('profile')[0];
@@ -49,8 +48,8 @@ signIn.onclick = () => {
 }
 
 signout.onclick = () => {
-    let json = {username: Value.username, password: Value.password, signed: false};
-    json = JSON.stringify(json);
+    Value.signed = false
+    json = JSON.stringify(Value);
     localStorage.setItem('data', json);
     window.location.reload();
 }
