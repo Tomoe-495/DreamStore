@@ -691,6 +691,7 @@ ion-icon{
     .user-profile{
         gap: auto;
         justify-content:space-evenly;
+        padding: 0 10px;
     }
     .welcome-msg{
         text-align: center;
