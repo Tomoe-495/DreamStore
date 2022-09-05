@@ -620,7 +620,7 @@ ion-icon{
 }
 
         /* mobile size */
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 700px){
     .main-container{
         overflow: visible;
         overflow-x: hidden;
@@ -723,7 +723,13 @@ ion-icon{
     }
     .select-gallery{
         justify-content:space-around;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 150px));
     }
+
+    .gap-card{
+        width: 150px;
+    }
+
     .recent-add{
         padding: 0;
         width: auto;
