@@ -596,9 +596,22 @@ ion-icon{
 
 .home, .about, .products, .contacts{
     animation: appear 500ms ease-in;
-    height: calc(100% - 65px);
 }
 @keyframes appear{
     0%{opacity: 0}100%{opacity: 1}
 }
 
+        /* laptop size */
+@media only screen and (max-width: 992px){
+    
+}
+
+        /* table size */
+@media only screen and (max-width: 768px){
+
+}
+
+        /* mobile size */
+@media only screen and (max-width: 600px){
+    
+}
