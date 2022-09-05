@@ -689,8 +689,8 @@ ion-icon{
         margin-bottom: 20px;
     }
     .user-profile{
-        gap: 0;
-        justify-content:space-around;
+        gap: auto;
+        justify-content:space-evenly;
     }
     .welcome-msg{
         text-align: center;
