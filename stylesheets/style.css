@@ -688,8 +688,15 @@ ion-icon{
         gap: 20px;
         margin-bottom: 20px;
     }
+    .user-profile{
+        gap: 0;
+        justify-content:space-around;
+    }
     .welcome-msg{
         text-align: center;
+    }
+    .welcome-msg h2{
+        font-size: 20px;
     }
     .home{
         padding: 0 10px;
