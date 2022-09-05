@@ -498,6 +498,7 @@ ion-icon{
     width: 100%;
     grid-gap: 30px 20px;
     grid-template-columns: repeat(auto-fit, minmax(160px, 180px));
+    justify-content: space-between;
     padding-bottom: 50px;
 }
 
@@ -720,14 +721,14 @@ ion-icon{
     }
     .selections{
         height: auto;
+        padding: 0;
     }
     .select-gallery{
-        justify-content:space-around;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 150px));
+        width: auto;
+        grid-template-columns: repeat(auto-fit, minmax(130px, 140px));
     }
-
-    .gap-card{
-        width: 150px;
+    .gal-card{
+        width: 100%;
     }
 
     .recent-add{
