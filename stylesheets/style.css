@@ -680,7 +680,7 @@ ion-icon{
     }
 
     .section-top{
-        width: calc(100% - 70px);
+        width: auto;
     
         flex-direction: column;
         padding: 10px 35px;
@@ -689,9 +689,7 @@ ion-icon{
         margin-bottom: 20px;
     }
     .user-profile{
-        gap: auto;
-        justify-content:space-evenly;
-        padding: 0 10px;
+        gap: 10px;
     }
     .welcome-msg{
         text-align: center;
