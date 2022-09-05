@@ -136,3 +136,25 @@ sectAppear(productbtn, product, [about, home, contact], 2)
 sectAppear(contactbtn, contact, [about, product, home], 4)
 
 //      section changing  --- end
+
+//          reveal content
+
+function reveal(){
+    let reveal = document.querySelectorAll('.reveal');
+    
+    for(let i = 0; i < reveal.length; i++){
+        let windowheight = window.innerHeight;
+        let revealtop = reveal[i].getBoundingClientRect().top;
+        let revealpoint = 100;
+
+        if(revealtop < windowheight - revealpoint){
+            reveal[i].classList.add('active');
+        }else{
+            reveal[i].classList.remove('active');
+        }
+    }
+}
+
+window.addEventListener('scroll', reveal);
+
+//      reveal content end
