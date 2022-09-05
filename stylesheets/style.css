@@ -652,6 +652,10 @@ ion-icon{
     }
     .nav-p{
         z-index: 5;
+        font-size: 12px;
+    }
+    .nav-item ion-icon{
+        font-size: 20px;
     }
     .nav-color{
         height: 200px;
@@ -721,6 +725,6 @@ ion-icon{
         padding: 0 20px 100px 20px;
     }
     .r-head{
-        font-size: 30px;
+        font-size: 25px;
     }
 }
