@@ -117,6 +117,8 @@ let home = document.getElementsByClassName('home')[0];
 let about = document.getElementsByClassName('about')[0];
 let product = document.getElementsByClassName('products')[0];
 let contact = document.getElementsByClassName('contacts')[0];
+let msg = document.getElementsByClassName('welcome-msg')[0];
+let sectiontop = document.getElementsByClassName('section-top')[0];
 
 function sectAppear(btn, sect, arg,  num){
     btn.onclick = () => {
@@ -127,6 +129,15 @@ function sectAppear(btn, sect, arg,  num){
         for(let n of navitem){
             n.classList.remove('active');
         }navitem[num].classList.add('active');
+
+        if(sect == home){
+            msg.style.display = "block";
+            sectiontop.style.justifyContent = "space-between";
+        }else if(sect != home){
+            msg.style.display = "none";
+            sectiontop.style.justifyContent = "flex-end";
+        }
+
     }
 }
 
