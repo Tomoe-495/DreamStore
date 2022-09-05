@@ -115,23 +115,29 @@ ion-icon{
 }
 
 .question{
-    width: 70%;
-    height: auto;
+    width: 150px;
+    height: 135px;;
     padding: 20px 10px;
     font-family: Montserrat;
     background-color: #fff;
     filter: drop-shadow(rgba(0, 0, 0, .3) 5px 5px 10px);
     border-radius: 7px;
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
+    position: fixed;
+    bottom: -120px;
+    left: 100px;
+    z-index: 99;
     transform: translateX(-50%);
+    cursor: pointer;
 
     display: flex;
     gap: 10px;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: all 300ms ease-in;
+}
+.question.active{
+    bottom: 5px;
 }
 .q-head{
     margin-bottom: 10px;
@@ -416,7 +422,9 @@ ion-icon{
 .status{
     width: 300px;
     padding: 10px 20px;
-    background-image: url("../images/7.jpg");
+    background-image: url("../images/19.jpg");
+    background-color: rgba(0,0,0,.4);
+    background-blend-mode: overlay;
     background-size: cover;
     background-position: center;
 }
@@ -451,7 +459,6 @@ ion-icon{
     width: 100%;
     height: 60vh;
     padding: 10px 10px 0 0;
-    margin-bottom: 50px;
 }
 
 .select-head{
@@ -481,12 +488,13 @@ ion-icon{
     margin-top: 30px;
     display: grid;
     width: 100%;
-    grid-gap: 20px 40px;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 170px));
+    grid-gap: 30px 20px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 180px));
+    padding-bottom: 50px;
 }
 
 .gal-card{
-    width: 170px;
+    width: 180px;
     height: 250px;
     color: black;
     overflow: hidden;

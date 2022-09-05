@@ -11,6 +11,20 @@ profile.onclick = () => {
 }
 // profile pop up end
 
+//      question
+let q = document.getElementsByClassName('question')[0];
+let q_check = false;
+q.onclick = () => {
+    q_check = ! q_check;
+    if(q_check){
+        q.classList.add('active');
+    }else{
+        q.classList.remove('active');
+    }
+}
+
+//      question end
+
 //  registration
 let createACC = document.getElementsByClassName('create-account')[0];
 let signIn = document.getElementsByClassName('signin')[0];
