@@ -263,7 +263,8 @@ ion-icon{
 
 .signing-section{
     position: fixed;
-    right: 0;
+    display: flex;
+    right: -100%;
     top: 0;
     width: 100%;
     height: 100%;
@@ -272,12 +273,9 @@ ion-icon{
     display: none;
     justify-content: flex-end;
     z-index: 9999;
-    animation: signappear 700ms;
 }
-@keyframes signappear{0%{right: -100%;opacity: 0;}100%{right: 0;opacity: 1;}}
-
 .signing-section.active{
-    display: flex;
+    right: 0;
 }
 
 .acc-sign{
