@@ -3,11 +3,12 @@ Value = JSON.parse(get);
 console.log(Value)
 
 let User = document.getElementsByClassName('user-welcome')[0];
+let s_pop = document.getElementsByClassName('signing-section')[0];
 
 // profile pop up 
 let profile = document.getElementsByClassName('profile')[0];
 profile.onclick = () => {
-    profile.classList.add('active');
+    s_pop.classList.add('active');
 }
 // profile pop up end
 
