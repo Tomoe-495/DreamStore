@@ -799,6 +799,9 @@ ion-icon{
     .r-head{
         font-size: 25px;
     }
+    .signing-section{
+        opacity: 1;
+    }
     .acc-sign{
         width: 100%;
     }
