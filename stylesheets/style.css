@@ -289,13 +289,13 @@ ion-icon{
 }
 .close{
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 20px;
+    top: 20px;
     font-weight: 500;
     color: rgb(150, 150, 150);
     transition: all 300ms linear;
     cursor: pointer;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 .close:hover{
     color: rgb(50, 50, 50);
@@ -335,22 +335,38 @@ ion-icon{
     flex-direction: column;
     align-items: center;
     margin: 10px 0;
-    gap: 30px;
+    gap: 50px;
     transition: all 300ms ease-out;
 }
 .create-acc{
     display: flex;
 }
+.form-input{
+    position: relative;
+    width: 300px;
+}
+.form-input span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: rgb(150, 150, 150);
+    font-size: 1em;
+    transition: all 300ms;
+}
 .create-acc input, .acc-signin input{
-    text-align: center;
+    width: 100%;
     padding: 5px 0;
-    border: 1px solid rgba(0, 0, 0, .43);
-    border-radius: 10px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
     transition: all 300ms;
 }
 .create-acc input:focus, .acc-signin input:focus{
-    filter: drop-shadow(rgba(0, 0, 0, .1) 0 2px 10px);
-    padding: 7px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+.create-acc input:focus ~ span, .acc-signin input:focus ~ span{
+    top: -13px;
+    font-size: 0.7em; 
+    color: var(--theme3);
 }
 .create-acc button, .acc-signin button{
     border: none;
@@ -391,7 +407,7 @@ ion-icon{
     font-weight: 300;
 }
 
-.error-message{
+.error-message, .error-msg{
     color: red;
     animation:shake 300ms;
 }
@@ -773,5 +789,8 @@ ion-icon{
     }
     .r-head{
         font-size: 25px;
+    }
+    .acc-sign{
+        width: 100%;
     }
 }

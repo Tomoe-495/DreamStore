@@ -4,6 +4,16 @@ console.log(Value)
 
 let User = document.getElementsByClassName('user-welcome')[0];
 let s_pop = document.getElementsByClassName('signing-section')[0];
+let close = document.getElementsByClassName('close')[0];
+
+close.onclick = () => {
+    s_pop.classList.remove('active');
+}
+window.onclick = function(event) {
+    if (event.target == s_pop){
+        s_pop.classList.remove('active');
+    }
+}
 
 // profile pop up 
 let profile = document.getElementsByClassName('profile')[0];
@@ -27,20 +37,49 @@ q.onclick = () => {
 //      question end
 
 //  registration
+let inps = document.getElementsByClassName('inp');
+let sp = document.getElementsByClassName('sp');
+
+function inpfield(num){
+    inps[num].onkeyup = () => {
+        let inp = inps[num].value;
+        if(inp.length > 0){
+            sp[num].style.top = "-13px";
+            sp[num].style.fontSize = "0.7em";
+            sp[num].style.color = "var(--theme3)";
+        }
+    }
+}
+
+inpfield(0)
+inpfield(1)
+inpfield(2)
+inpfield(3)
+inpfield(4)
+
 let createACC = document.getElementsByClassName('create-account')[0];
 let signIn = document.getElementsByClassName('signin')[0];
 let signout = document.getElementsByClassName('sign--out')[0];
 
 let errorM =  document.getElementsByClassName('error-message')[0];
+let em = document.getElementsByClassName('error-msg')[0];
 
 createACC.onclick = () =>{
     let userName = document.getElementsByClassName('username')[0].value;
     let userPass = document.getElementsByClassName('userpass')[0].value;
 
-    let json = {username: userName, password: userPass, signed: false};
-    json = JSON.stringify(json);
-    localStorage.setItem('data', json);
-    window.location.reload();
+    if(userName.length == 0 || userPass.length == 0){
+        em.innerHTML = "input all the Fields";
+    }else if(/\d/.test(userName)){
+        em.innerHTML = "Invalid Name";
+    }else if(userPass.length < 8){
+        em.innerHTML = "Password too Short"
+    }else{
+        let json = {username: userName, password: userPass, signed: false};
+        json = JSON.stringify(json);
+        localStorage.setItem('data', json);
+        window.location.reload();
+    }
 }
 
 signIn.onclick = () => {
