@@ -116,6 +116,7 @@ if(Value != null){
         User.style.display = "block";
         document.getElementsByClassName('acc-btns')[0].style.display = "none";
         document.getElementsByClassName('sign-out')[0].style.display = "flex";
+        document.getElementsByClassName('create-acc')[0].style.display = "none";
     }else{
         User.style.display = "none";
         document.getElementsByClassName('acc-btns')[0].style.display = "flex";

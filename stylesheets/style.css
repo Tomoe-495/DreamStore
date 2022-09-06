@@ -301,15 +301,24 @@ ion-icon{
     color: rgb(50, 50, 50);
 }
 
+.sign-out, .acc-btns{
+    position: absolute;
+    top: 100px;
+    right: 50%;
+    transform: translateX(50%);
+}
 
 .acc-btns{
     display: flex;
+    gap: 10px;
     margin-top: 10px;
     justify-content:center
 }
 .acc-btns .btns{
     border: none;
-    background-color: #fff;
+    width: 150px;
+    border-radius: 10px 10px 0 0;
+    background-color: rgba(0, 0, 0, .03);
     padding: 10px 10px;
     color: #454545;
     font-weight: 700;
